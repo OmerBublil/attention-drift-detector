@@ -1,0 +1,23 @@
+[
+    {
+      "prompt": "What is the output of: print(2 + 3)?",
+      "options": ["23", "5", "2+3"],
+      "correctIndex": 1
+    },
+    {
+      "prompt": "Which of the following is a valid Python variable name?",
+      "options": ["2name", "user_name", "user-name"],
+      "correctIndex": 1
+    },
+    {
+      "prompt": "What keyword is used to define a function in Python?",
+      "options": ["func", "define", "def"],
+      "correctIndex": 2
+    },
+    {
+      "prompt": "What is the type of the value in: x = [1, 2, 3]?",
+      "options": ["list", "int", "string"],
+      "correctIndex": 0
+    }
+  ]
+  

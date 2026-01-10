@@ -1,0 +1,14 @@
+# Node modules
+frontend/node_modules/
+
+# Python virtual environment
+backend/venv/
+
+# Compiled output
+dist/
+
+# Temporary data storage
+backend/data.json
+
+# Mac system files
+.DS_Store

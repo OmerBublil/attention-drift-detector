@@ -1,0 +1,12 @@
+[
+    "Python is a popular, high-level programming language known for its simplicity and readability. It is used for web development, data analysis, automation, machine learning, scripting, and more. One of Python’s biggest advantages is that its syntax is clean and easy to understand.",
+  
+    "A variable is a name that refers to a value stored in memory. In Python you do not need to declare types explicitly; the type is inferred from the assigned value. Examples: x = 10, name = \"Omer\", price = 19.99.",
+  
+    "A function is a reusable block of code that performs a specific task. Functions in Python are defined using the 'def' keyword. Example: def greet(name): print('Hello', name).",
+  
+    "Control flow allows a program to make decisions and repeat actions. Common statements include if/else, for loops, and while loops. Example: for i in range(5): print(i).",
+  
+    "A list is an ordered collection of items. Lists can contain numbers, strings, or any Python objects. Example: items = [1, 2, 3, 'hello']."
+  ]
+  
