@@ -10,12 +10,14 @@ function ReadingTask({ sessionId, onFinish }) {
     const now = performance.now();
     const readingTime = now - startTime;
     const text = segments[index];
+    const eventTime = Date.now(); // absolute timestamp in ms
 
     const payload = {
       session_id: sessionId,
       segment_id: index,
       text_length: text.length,
       reading_time_ms: readingTime,
+      client_timestamp_ms: eventTime,
     };
 
     console.log("Sending segment payload:", payload);

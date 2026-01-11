@@ -6,31 +6,31 @@ function ReactionTask({ sessionId, onFinish }) {
   const [index, setIndex] = useState(0);
   const [startTime, setStartTime] = useState(performance.now());
 
-  // Triggered when a user selects an answer
   const handleAnswer = async (optionIndex) => {
     const now = performance.now();
     const reactionTime = now - startTime;
-
     const question = questions[index];
     const isCorrect = optionIndex === question.correctIndex;
+    const eventTime = Date.now(); // absolute timestamp in ms
 
-    // Prepare payload to send to backend
     const payload = {
       session_id: sessionId,
       question_index: index,
       reaction_time_ms: reactionTime,
-      is_correct: isCorrect
+      is_correct: isCorrect,
+      client_timestamp_ms: eventTime,
+      chosen_option_index: optionIndex,
     };
 
+    console.log("Sending reaction payload:", payload);
+
     try {
-      // Send reaction-time event to backend API
       await api.post("/reaction", payload);
-      console.log("Reaction event sent:", payload);
+      console.log("Reaction event sent successfully");
     } catch (error) {
       console.error("Failed to send reaction event:", error);
     }
 
-    // Move to next question or finish the task
     if (index < questions.length - 1) {
       setIndex(index + 1);
       setStartTime(performance.now());
